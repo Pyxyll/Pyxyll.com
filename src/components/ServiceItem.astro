@@ -1,0 +1,18 @@
+---
+const { serviceImage, serviceTitle } = Astro.props;
+---
+
+<div class="service">
+  <img
+    class="service-icon"
+    src={serviceImage}
+    alt=""
+    width="240px"
+    height="240px"
+  />
+  <h3>{serviceTitle}</h3>
+  <p>
+    Ditch the jargon. We craft beautiful, functional websites that reflect your
+    unique vibe. Let’s bring your online vision to life!
+  </p>
+</div>

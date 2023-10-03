@@ -1,0 +1,85 @@
+<style>
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-section {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .footer-logo {
+    max-width: 100px; /* or whatever size you prefer */
+  }
+
+  .social-links,
+  .sitemap {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-links a {
+    color: var(--black);
+    font-size: 24px; /* adjust as necessary */
+    text-decoration: none;
+  }
+
+  .sitemap li {
+    margin-bottom: 10px;
+  }
+
+  .sitemap a {
+    text-decoration: none;
+    color: var(--black);
+    text-align: left;
+  }
+
+  .social-links a:hover,
+  .sitemap a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <img src="images/offsetlogo.svg" alt="Your Logo" class="footer-logo" />
+    </div>
+
+    <div class="footer-section">
+      <p>Made with ♥ by Pyxyll</p>
+    </div>
+
+    <div class="footer-section">
+      <ul class="social-links">
+        <li>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a
+          >
+        </li>
+        <li>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Mastodon"><i class="fab fa-mastodon"></i></a>
+        </li>
+      </ul>
+      <ul class="sitemap">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

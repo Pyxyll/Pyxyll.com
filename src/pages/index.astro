@@ -1,6 +1,8 @@
 ---
 import CtaButton from "../components/CtaButton.astro";
 import NavBar from "../components/NavBar.astro";
+import ServiceItem from "../components/ServiceItem.astro";
+import PageFooter from "../components/PageFooter.astro";
 ---
 
 <html lang="en">
@@ -8,7 +10,6 @@ import NavBar from "../components/NavBar.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyxyll - Web Artisan</title>
-    <link rel="icon" type="image/x-icon" href="/images/offsetlogo.svg" />
     <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
@@ -38,95 +39,27 @@ import NavBar from "../components/NavBar.astro";
 
     <section>
       <div class="services-section">
-        <div class="service">
-          <img
-            class="service-icon"
-            src="images/webdevicon.svg"
-            alt=""
-            width="240px"
-            height="240px"
-          />
-          <h3>Web Development</h3>
-          <p>
-            Ditch the jargon. We craft beautiful, functional websites that
-            reflect your unique vibe. Let’s bring your online vision to life!
-          </p>
-        </div>
-
-        <div class="service">
-          <img
-            class="service-icon"
-            src="images/hostingicon.svg"
-            alt=""
-            width="240px"
-            height="240px"
-          />
-          <h3>Web Development</h3>
-          <p>
-            Need a digital home for your site? We've got you. Reliable,
-            hassle-free, and with a touch of magic.
-          </p>
-        </div>
-
-        <div class="service">
-          <img
-            class="service-icon"
-            src="images/emailicon.svg"
-            alt=""
-            width="240px"
-            height="240px"
-          />
-          <h3>Web Development</h3>
-          <p>
-            More than just '@yourname.com'. Personalized, secure, and all about
-            you.
-          </p>
-        </div>
-
-        <div class="service">
-          <img
-            class="service-icon"
-            src="images/maintenenceicon.svg"
-            alt=""
-            width="240px"
-            height="240px"
-          />
-          <h3>Web Development</h3>
-          <p>
-            Keeping things fresh and running smooth. We’re the behind-the-scenes
-            fairy for your website.
-          </p>
-        </div>
-
-        <div class="service">
-          <img
-            class="service-icon"
-            src="images/seoicon.svg"
-            alt=""
-            width="240px"
-            height="240px"
-          />
-          <h3>Web Development</h3>
-          <p>
-            Being found is key. We sprinkle the SEO magic so your brand shines
-            bright on search engines.
-          </p>
-        </div>
-
-        <div class="service">
-          <img
-            class="service-icon"
-            src="images/supporticon.svg"
-            alt=""
-            width="240px"
-            height="240px"
-          />
-          <h3>Web Development</h3>
-          <p>
-            Got questions? Need a hand? We're your web BFF, always here for a
-            chat and some techy guidance.
-          </p>
-        </div>
+        <ServiceItem
+          serviceTitle="Web Development"
+          serviceImage="/images/webdevicon.svg"
+        />
+        <ServiceItem
+          serviceTitle="Hosting"
+          serviceImage="/images/hostingicon.svg"
+        />
+        <ServiceItem
+          serviceTitle="Email"
+          serviceImage="/images/emailicon.svg"
+        />
+        <ServiceItem
+          serviceTitle="Maintenence"
+          serviceImage="/images/maintenenceicon.svg"
+        />
+        <ServiceItem serviceTitle="SEO" serviceImage="/images/seoicon.svg" />
+        <ServiceItem
+          serviceTitle="Support"
+          serviceImage="/images/supporticon.svg"
+        />
       </div>
     </section>
 
@@ -150,48 +83,6 @@ import NavBar from "../components/NavBar.astro";
         </div>
       </div>
     </section>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <img
-            src="images/offsetlogo.svg"
-            alt="Your Logo"
-            class="footer-logo"
-          />
-        </div>
-
-        <div class="footer-section">
-          <p>Made with ♥ by Pyxyll</p>
-        </div>
-
-        <div class="footer-section">
-          <ul class="social-links">
-            <li>
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a
-              >
-            </li>
-            <li>
-              <a href="#" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i></a
-              >
-            </li>
-            <li>
-              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            </li>
-            <li>
-              <a href="#" aria-label="Mastodon"
-                ><i class="fab fa-mastodon"></i></a
-              >
-            </li>
-          </ul>
-          <ul class="sitemap">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <PageFooter />
   </body>
 </html>

@@ -155,3 +155,18 @@
     </div>
   </nav>
 </header>
+
+<script type="module">
+  const toggleButton = document.getElementsByClassName("ham-menu")[0];
+  const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+  const bars = document.getElementsByClassName("bar");
+
+  toggleButton.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+
+    // Loop through all bars and toggle the 'active' class for each
+    for (let i = 0; i < bars.length; i++) {
+      bars[i].classList.toggle("active");
+    }
+  });
+</script>

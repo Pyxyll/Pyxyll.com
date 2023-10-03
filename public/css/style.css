@@ -76,54 +76,7 @@ button {
   width: 15em;
 } */
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
 
-.footer-section {
-  flex: 1;
-  text-align: center;
-  margin: 0 20px;
-}
-
-.footer-logo {
-  max-width: 100px; /* or whatever size you prefer */
-}
-
-.social-links,
-.sitemap {
-  list-style-type: none;
-  padding: 0;
-}
-
-.social-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-links a {
-  color: var(--black);
-  font-size: 24px; /* adjust as necessary */
-  text-decoration: none;
-}
-
-.sitemap li {
-  margin-bottom: 10px;
-}
-
-.sitemap a {
-  text-decoration: none;
-  color: var(--black);
-  text-align: left;
-}
-
-.social-links a:hover,
-.sitemap a:hover {
-  text-decoration: underline;
-}
 
 .services-section {
   display: flex;
