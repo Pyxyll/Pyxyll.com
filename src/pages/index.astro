@@ -1,88 +1,80 @@
 ---
+import Main from "../layouts/Main.astro";
 import CtaButton from "../components/CtaButton.astro";
-import NavBar from "../components/NavBar.astro";
 import ServiceItem from "../components/ServiceItem.astro";
-import PageFooter from "../components/PageFooter.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pyxyll - Web Artisan</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
+<Main title="Home">
+  <section class="flex-section">
+    <div class="half image-side">
+      <img src="images/hero.svg" alt="Description of Image" />
+    </div>
 
-  <body>
-    <NavBar />
+    <div class="half text-side">
+      <h1>Welcome to Pyxyll</h1>
+      <p>
+        At Pyxyll, we dont just design and code — we craft online experiences.
+        Every pixel has its purpose, every line of code its place. Jump into our
+        digital playground where design meets function, making your brand stand
+        out effortlessly.
+      </p>
+      <CtaButton />
+    </div>
+  </section>
 
-    <section class="flex-section">
-      <div class="half image-side">
-        <img src="images/hero.svg" alt="Description of Image" />
+  <section>
+    <div class="services-section">
+      <ServiceItem
+        serviceTitle="Web Development"
+        serviceImage="/images/webdevicon.svg"
+        serviceText="Crafting digital experiences tailored to your vision. From initial idea to final pixel, we ensure your site stands out and speaks to your audience."
+      />
+      <ServiceItem
+        serviceTitle="Hosting"
+        serviceImage="/images/hostingicon.svg"
+        serviceText="Our hosting is more than just space; it's peace of mind. Rely on us for high-speed, secure, and consistently smooth hosting that keeps your website performing at its peak."
+      />
+      <ServiceItem
+        serviceTitle="Email"
+        serviceImage="/images/emailicon.svg"
+        serviceText="In the age of instant communication, you need an email service that's both reliable and efficient. With our solutions, you're always connected and your messages shine through."
+      />
+      <ServiceItem
+        serviceTitle="Maintenence"
+        serviceImage="/images/maintenenceicon.svg"
+        serviceText="Digital landscapes change, but our commitment doesn't. Regular updates, prompt fixes, and a fresh look ensure your site remains at the forefront and functions without a hitch."
+      />
+      <ServiceItem
+        serviceTitle="SEO"
+        serviceImage="/images/seoicon.svg"
+        serviceText="In the vast world of the web, stand out where it counts. Our SEO strategies not only boost your site’s visibility but ensure you reach the right audience at the right time."
+      />
+      <ServiceItem
+        serviceTitle="Support"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+      />
+    </div>
+  </section>
+
+  <section>
+    <div class="flex-sub-hero">
+      <div class="flex-item center">
+        <img class="service-icon" src="images/lighticon.svg" alt="" />
+      </div>
+      <div class="flex-item text center">
+        <p>
+          In today's world, everyone's online. Your website? It's your digital
+          hello. But it's crowded out there, so why blend in? I'm here to help
+          craft a site that's as unique as you. Let's make something awesome and
+          unforgettable together.
+        </p>
       </div>
 
-      <div class="half text-side">
-        <h1>Welcome to Pyxyll</h1>
-        <p>
-          At Pyxyll, we dont just design and code — we craft online experiences.
-          Every pixel has its purpose, every line of code its place. Jump into
-          our digital playground where design meets function, making your brand
-          stand out effortlessly.
-        </p>
+      <!-- Third row: Centered Button -->
+      <div class="flex-item center">
         <CtaButton />
       </div>
-    </section>
-
-    <section>
-      <div class="services-section">
-        <ServiceItem
-          serviceTitle="Web Development"
-          serviceImage="/images/webdevicon.svg"
-        />
-        <ServiceItem
-          serviceTitle="Hosting"
-          serviceImage="/images/hostingicon.svg"
-        />
-        <ServiceItem
-          serviceTitle="Email"
-          serviceImage="/images/emailicon.svg"
-        />
-        <ServiceItem
-          serviceTitle="Maintenence"
-          serviceImage="/images/maintenenceicon.svg"
-        />
-        <ServiceItem serviceTitle="SEO" serviceImage="/images/seoicon.svg" />
-        <ServiceItem
-          serviceTitle="Support"
-          serviceImage="/images/supporticon.svg"
-        />
-      </div>
-    </section>
-
-    <section>
-      <div class="flex-sub-hero">
-        <div class="flex-item center">
-          <img class="service-icon" src="images/lighticon.svg" alt="" />
-        </div>
-        <div class="flex-item text center">
-          <p>
-            In today's world, everyone's online. Your website? It's your digital
-            hello. But it's crowded out there, so why blend in? I'm here to help
-            craft a site that's as unique as you. Let's make something awesome
-            and unforgettable together.
-          </p>
-        </div>
-
-        <!-- Third row: Centered Button -->
-        <div class="flex-item center">
-          <CtaButton />
-        </div>
-      </div>
-    </section>
-    <PageFooter />
-  </body>
-</html>
+    </div>
+  </section>
+</Main>
