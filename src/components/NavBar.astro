@@ -156,16 +156,18 @@
 </header>
 
 <script type="module">
-  const toggleButton = document.getElementsByClassName("ham-menu")[0];
-  const navbarLinks = document.getElementsByClassName("navbar-links")[0];
-  const bars = document.getElementsByClassName("bar");
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".ham-menu");
+    const navbarLinks = document.querySelector(".navbar-links");
+    const bars = document.querySelectorAll(".bar");
 
-  toggleButton.addEventListener("click", () => {
-    navbarLinks.classList.toggle("active");
+    toggleButton.addEventListener("click", () => {
+      navbarLinks.classList.toggle("active");
 
-    // Loop through all bars and toggle the 'active' class for each
-    for (let i = 0; i < bars.length; i++) {
-      bars[i].classList.toggle("active");
-    }
+      // Loop through all bars and toggle the 'active' class for each
+      for (let i = 0; i < bars.length; i++) {
+        bars[i].classList.toggle("active");
+      }
+    });
   });
 </script>
