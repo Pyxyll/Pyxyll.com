@@ -1,0 +1,50 @@
+---
+const { image, text } = Astro.props;
+---
+
+<div class="flex-container">
+  <div class="flex-content image-side">
+    <img src={image} alt="Description of image" />
+  </div>
+  <div class="flex-content text-side">
+    <p>{text}</p>
+  </div>
+</div>
+
+<style>
+  .flex-container {
+    padding: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100rem; /* 1600px in rem */
+    margin: 0 auto; /* to center the container if the viewport is wider */
+  }
+
+  .flex-content {
+    box-sizing: border-box; /* to make sure padding doesn't affect the total width */
+  }
+
+  .image-side {
+    width: 40%;
+  }
+
+  .text-side {
+    width: 60%;
+    padding: 0 2%; /* just adding some space so the text doesn't touch the edge */
+  }
+
+  /* Media query for screen resizing */
+  @media (max-width: 62.5rem) {
+    /* 1000px in rem */
+    .flex-container {
+      padding: 2em;
+      flex-direction: column;
+    }
+
+    .image-side,
+    .text-side {
+      width: 100%;
+    }
+  }
+</style>
