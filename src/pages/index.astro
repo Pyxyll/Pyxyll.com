@@ -5,14 +5,14 @@ import ServiceItem from "../components/ServiceItem.astro";
 ---
 
 <Main title="Home">
-  <section class="flex-section">
+  <section class="flex-section" transition:name="section">
     <div class="half image-side">
-      <img src="images/hero.svg" alt="Description of Image" />
+      <img src="images/hero.svg" alt="Description of Image" transition:name="testimg" />
     </div>
 
     <div class="half text-side">
       <h1>Welcome to Pyxyll</h1>
-      <p>
+      <p transition:name="testtext">
         At Pyxyll, we dont just design and code — we craft online experiences.
         Every pixel has its purpose, every line of code its place. Jump into our
         digital playground where design meets function, making your brand stand
@@ -23,7 +23,7 @@ import ServiceItem from "../components/ServiceItem.astro";
   </section>
 
   <section>
-    <div class="services-section">
+    <div class="services-section" transition:name="flexy">
       <ServiceItem
         serviceTitle="Web Development"
         serviceImage="/images/webdevicon.svg"

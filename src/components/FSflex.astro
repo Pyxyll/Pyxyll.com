@@ -4,10 +4,10 @@ const { image, text } = Astro.props;
 
 <div class="flex-container">
   <div class="flex-content image-side">
-    <img src={image} alt="Description of image" />
+    <img src={image} alt="Description of image" transition:name="testimg" />
   </div>
   <div class="flex-content text-side">
-    <p>{text}</p>
+    <p transition:name="testtext">{text}</p>
   </div>
 </div>
 
