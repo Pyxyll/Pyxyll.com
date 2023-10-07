@@ -1,16 +1,13 @@
 ---
 import Main from "../layouts/Main.astro";
 import FSflex from "../components/FSflex.astro";
-import ProcessStep from "../components/ProcessStep.astro"
-import CtaButton from "../components/CtaButton.astro"
-// import ServiceItem from "../components/ServiceItem.astro";
-
-//tech stack: HTML, CSS, JS, Node, Astro, Tailwind, Wordpress, StoryBlocks, Supabase
+import ProcessStep from "../components/ProcessStep.astro";
+import CtaButton from "../components/CtaButton.astro";
+import TechStack from "../components/TechStack.astro";
 ---
 
 <Main>
   <section transition:name="section">
-
     <FSflex
       image="images/offsetlogo.svg"
       text="Hey there! Welcome to Pyxyll. Ever felt like you're seeing the same website over and over again? In a world where digital designs often feel like déjà vu, we're on a mission to shake things up. Because why settle for the ordinary when you can have extraordinary? Here, we're not just about pixels and code (although we're pretty geeky about that too). We believe in breaking the mold, thinking outside the box, and most importantly, having a blast while doing it. It's high time to bring back the fun, the flair, and the unexpected into the world of web design!"
@@ -18,17 +15,92 @@ import CtaButton from "../components/CtaButton.astro"
   </section>
 
   <section class="process-section">
-    <div class="process-container" transition:name="flexy">
-    <ProcessStep step="01." title="Proposal / Discovery" text="Let's kick things off with a chat! This is where we sit down (or hop on a call) and talk about what you're envisioning for your website. Share with us your dreams, the cool features you want, and who you want to reach. We'll then whip up a proposal that captures everything we discussed."/>
+    <div class="process-container">
+      <ProcessStep
+        step="01."
+        title="Proposal / Discovery"
+        text="Let's kick things off with a chat! This is where we sit down (or hop on a call) and talk about what you're envisioning for your website. Share with us your dreams, the cool features you want, and who you want to reach. We'll then whip up a proposal that captures everything we discussed."
+      />
 
-    <ProcessStep step="02." title="Refinement" text="Got feedback? Let’s hear it! This step is all about tuning into the finer details. Maybe you've had some new ideas or want to tweak a few things. No worries – together, we'll make sure everything is just right and on track"/>
+      <ProcessStep
+        step="02."
+        title="Refinement"
+        text="Got feedback? Let’s hear it! This step is all about tuning into the finer details. Maybe you've had some new ideas or want to tweak a few things. No worries – together, we'll make sure everything is just right and on track"
+      />
 
-    <ProcessStep step="03." title="Content Collection" text="Content is the heart and soul of any website, so let's gather all the good stuff. Pictures, words, videos, or even doodles – we want them. And if you're feeling a bit stuck on what to create, we're right here to give you a nudge or craft some snazzy content for you."/>
+      <ProcessStep
+        step="03."
+        title="Content Collection"
+        text="Content is the heart and soul of any website, so let's gather all the good stuff. Pictures, words, videos, or even doodles – we want them. And if you're feeling a bit stuck on what to create, we're right here to give you a nudge or craft some snazzy content for you."
+      />
 
-    <ProcessStep step="04." title="Design & Development" text="Now, the fun part! Our creative squad will take all our discussions and turn them into a fab-looking website design. Once you give us the thumbs up on the design, we'll roll up our sleeves and start building. Oh, and just a heads up, before we dive deep into the development process, we'll need 50% of the invoice. It’s kind of like buying a concert ticket before the show!"/>
+      <ProcessStep
+        step="04."
+        title="Design & Development"
+        text="Now, the fun part! Our creative squad will take all our discussions and turn them into a fab-looking website design. Once you give us the thumbs up on the design, we'll roll up our sleeves and start building. Oh, and just a heads up, before we dive deep into the development process, we'll need 50% of the invoice. It’s kind of like buying a concert ticket before the show!"
+      />
 
-    <ProcessStep step="05." title="Testing & Deployment" text="We're all about those finishing touches. We'll take your site for a test drive, making sure it looks and works great everywhere – on mobiles, tablets, and desktops. Once we're sure it's ready for the world to see and you're all set to go live, the remaining 50% of the invoice will seal the deal, and we'll hit that launch button!"/>
-  </div>
+      <ProcessStep
+        step="05."
+        title="Testing & Deployment"
+        text="We're all about those finishing touches. We'll take your site for a test drive, making sure it looks and works great everywhere – on mobiles, tablets, and desktops. Once we're sure it's ready for the world to see and you're all set to go live, the remaining 50% of the invoice will seal the deal, and we'll hit that launch button!"
+      />
+    </div>
+  </section>
+
+  <section>
+    <div class="services-section">
+      <TechStack
+        serviceTitle="HTML"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Crafting digital experiences tailored to your vision. From initial idea to final pixel, we ensure your site stands out and speaks to your audience."
+      />
+      <TechStack
+        serviceTitle="CSS"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Our hosting is more than just space; it's peace of mind. Rely on us for high-speed, secure, and consistently smooth hosting that keeps your website performing at its peak."
+      />
+      <TechStack
+        serviceTitle="JavaScript"
+        serviceImage="/images/supporticon.svg"
+        serviceText="In the age of instant communication, you need an email service that's both reliable and efficient. With our solutions, you're always connected and your messages shine through."
+      />
+      <TechStack
+        serviceTitle="Node.js"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Digital landscapes change, but our commitment doesn't. Regular updates, prompt fixes, and a fresh look ensure your site remains at the forefront and functions without a hitch."
+      />
+      <TechStack
+        serviceTitle="Astro"
+        serviceImage="/images/supporticon.svg"
+        serviceText="In the vast world of the web, stand out where it counts. Our SEO strategies not only boost your site’s visibility but ensure you reach the right audience at the right time."
+      />
+      <TechStack
+        serviceTitle="Tailwind"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+      />
+      <TechStack
+        serviceTitle="Strapi"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+      />
+      <TechStack
+        serviceTitle="SupaBase"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+      />
+      <TechStack
+        serviceTitle="Vercel"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+      />
+      <TechStack
+        serviceTitle="Sitegrounds"
+        serviceImage="/images/supporticon.svg"
+        serviceText="Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+      />
+    </div>
   </section>
 
   <section>
@@ -54,13 +126,23 @@ import CtaButton from "../components/CtaButton.astro"
 </Main>
 
 <style>
-      .process-container
-       {
-        gap: 5rem;
+  .process-container {
+    gap: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-}
+  }
 
+  .tech-stack {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Change to flex-start to ensure items always start from the beginning of the row */
+    gap: 20px;
+  }
 </style>
