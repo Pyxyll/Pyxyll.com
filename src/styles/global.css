@@ -61,8 +61,8 @@ section {
   box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-.image-side img {
-  max-width: 80%; /* Makes sure the image doesn't overflow its container */
+.image-side dotlottie-player {
+  max-width: 100%; /* Makes sure the image doesn't overflow its container */
   height: auto; /* Maintains the image's aspect ratio */
 }
 
@@ -78,7 +78,7 @@ button {
 }
 
 /* For smaller screens - stacked view */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .flex-section {
     flex-direction: column;
   }
@@ -87,10 +87,6 @@ button {
     width: 100%; /* Allows each half to take up the full width of the viewport */
   }
 }
-
-/* .service-icon {
-  width: 15em;
-} */
 
 .services-section {
   margin: 5rem auto;

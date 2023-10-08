@@ -2,20 +2,17 @@
 const { step, title, text } = Astro.props;
 ---
 
-
-    <div class="process-step">
-        <div class="step-number">{step}</div>
-        <div class="step-details">
-            <h3>{title}</h3>
-            <p>{text}</p>
-        </div>
-    </div>
-
+<div class="process-step">
+  <div class="step-number">{step}</div>
+  <div class="step-no-mobile">{step}</div>
+  <div class="step-details">
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+</div>
 
 <style>
-
-
-.process-step {
+  .process-step {
     margin: auto;
     max-width: 100rem;
     display: flex;
@@ -26,26 +23,47 @@ const { step, title, text } = Astro.props;
     border-style: solid;
     padding: 50px 25px;
     background-color: white;
-}
+  }
 
-.step-number {
+  .step-number,
+  .step-no-mobile {
     font-size: 3rem;
     margin-right: 10px;
     color: rgb(255, 159, 236);
-}
+  }
 
-.process-step::after {
-    content: "";
-    border-left: 5px dotted black; 
-    position: absolute;
-    top: 100%;  /* starts from the bottom of the process-step */
-    left: 50%;  /* centers the line */
-    height: 100px; /* adjust based on your design */
-    background: url('images/hero.svg');
-    background-size: contain;
-}
-
-.process-step:last-child::after {
+  .step-no-mobile {
     display: none;
-}
+  }
+
+  .process-step::after {
+    content: "";
+    border-left: 5px dotted black;
+    position: absolute;
+    top: 100%; /* starts from the bottom of the process-step */
+    left: 50%; /* centers the line */
+    height: 100px; /* adjust based on your design */
+    background: url("images/hero.svg");
+    background-size: contain;
+  }
+
+  .process-step:last-child::after {
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    .step-number {
+      display: none;
+    }
+    .step-no-mobile {
+      padding-bottom: 0.5em;
+      top: 1em;
+      position: absolute;
+      display: block;
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
 </style>

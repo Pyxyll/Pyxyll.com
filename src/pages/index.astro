@@ -7,11 +7,19 @@ import ServiceItem from "../components/ServiceItem.astro";
 <Main title="Home">
   <section class="flex-section">
     <div class="half image-side">
-      <img
-        src="images/hero.svg"
-        alt="Description of Image"
-        transition:name="testimg"
-      />
+      <!-- <img src="images/hero.svg" alt="Description of Image" width="500em" /> -->
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+      <dotlottie-player
+        src="https://lottie.host/b4475a92-e45d-473d-96f3-a8472db181d2/7yso4KxMgV.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 800px; height: 800px"
+        direction="1"
+        mode="normal"
+        loop
+        autoplay></dotlottie-player>
     </div>
 
     <div class="half text-side">

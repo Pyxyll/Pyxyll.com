@@ -2,7 +2,6 @@
 import NavBar from "../components/NavBar.astro";
 import PageFooter from "../components/PageFooter.astro";
 import "../styles/global.css";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -10,15 +9,15 @@ import { ViewTransitions } from "astro:transitions";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{}</title>
-    <!-- <ViewTransitions /> -->
-    <!-- <link
+
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    /> -->
+    />
   </head>
 
   <body>
-    <NavBar/>
+    <NavBar />
     <slot />
     <PageFooter />
   </body>
