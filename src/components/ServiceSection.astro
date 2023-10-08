@@ -1,0 +1,28 @@
+---
+import ServiceItem from "../components/ServiceItem.astro";
+import service from "../data/service.json";
+---
+
+<div class="services-section">
+  {
+    service.map((service) => {
+      return (
+        <ServiceItem
+          serviceTitle={service.Title}
+          serviceImage={service.Image}
+          serviceText={service.Text}
+        />
+      );
+    })
+  }
+</div>
+
+<style>
+  .services-section {
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em; /* Gap between each service block */
+    max-width: 110rem;
+  }
+</style>

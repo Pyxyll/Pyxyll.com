@@ -1,0 +1,57 @@
+---
+// HeroSection.astro
+// import LottieAnimation from "./LottieAnimation.astro";
+import CtaButton from "./CtaButton.astro";
+---
+
+<div class="hero">
+  <div class="lottie-section">
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"></script>
+    <dotlottie-player
+      src="https://lottie.host/b4475a92-e45d-473d-96f3-a8472db181d2/7yso4KxMgV.lottie"
+      background="transparent"
+      speed="1.5"
+      style="max-width: 800px"
+      direction="1"
+      mode="normal"
+      loop
+      autoplay></dotlottie-player>
+  </div>
+  <div class="content-section">
+    <h1>Welcome to Pyxyll</h1>
+    <p>
+      At Pyxyll, we dont just design and code — we craft online experiences.
+      Every pixel has its purpose, every line of code its place. Jump into our
+      digital playground where design meets function, making your brand stand
+      out effortlessly.
+    </p>
+    <CtaButton buttonText="Get Started" />
+  </div>
+</div>
+
+<style>
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lottie-section,
+  .content-section {
+    flex: 1;
+    max-width: 50%;
+    padding: 2rem;
+  }
+
+  @media (max-width: 1000px) {
+    .hero {
+      flex-direction: column;
+    }
+    .lottie-section,
+    .content-section {
+      max-width: 100%;
+    }
+  }
+</style>

@@ -2,9 +2,21 @@
 const { serviceImage, serviceTitle, serviceText } = Astro.props;
 ---
 
+<div class="service">
+  <img
+    class="service-icon"
+    src={serviceImage}
+    alt=""
+    width="125px"
+    height="125px"
+  />
+  <h3>{serviceTitle}</h3>
+  <p>{serviceText}</p>
+</div>
+
 <style>
   .service {
-    flex: 0 0 calc(33.33% - 20px); /* Explicitly define flex-grow as 0 to avoid any growth */
+    flex: 0 0 calc(33.33% - 20px);
     box-sizing: border-box;
     text-align: center;
     border: solid 2px var(--black);
@@ -15,9 +27,7 @@ const { serviceImage, serviceTitle, serviceText } = Astro.props;
     display: inline-block;
     padding: 15px 25px;
     background-color: white;
-    text-transform: uppercase;
     color: black;
-    letter-spacing: 1px;
     box-shadow: -8px 8px 0 black;
     text-decoration: none;
     border-style: solid;
@@ -28,7 +38,7 @@ const { serviceImage, serviceTitle, serviceText } = Astro.props;
   }
 
   /* For medium screens - 2x3 layout */
-  @media (max-width: 1000px) {
+  @media (max-width: 1300px) {
     .service {
       flex: 0 0 calc(50% - 20px); /* Take half of the container width minus the gap */
     }
@@ -91,15 +101,3 @@ const { serviceImage, serviceTitle, serviceText } = Astro.props;
     z-index: -1;
   }
 </style>
-
-<div class="service">
-  <img
-    class="service-icon"
-    src={serviceImage}
-    alt=""
-    width="125px"
-    height="125px"
-  />
-  <h3>{serviceTitle}</h3>
-  <p>{serviceText}</p>
-</div>

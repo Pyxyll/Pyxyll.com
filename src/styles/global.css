@@ -1,11 +1,16 @@
 @import url("https://dev-cats.github.io/code-snippets/JetBrainsMono.css");
 
+/* SETUP STYLES */
+
 :root {
   --black: #191919;
   --white: #f5f5f5;
   --heading-text-h1: 2em;
   --heading-text-h2: 1.5em;
   --body-text: 1.2em;
+  --Mheading-text-h1: 1.5em;
+  --Mheading-text-h2: 1em;
+  --Mbody-text: 1.1em;
   font-family: "JetBrains Mono", sans-serif;
 }
 
@@ -30,14 +35,17 @@ body {
 
 h1 {
   font-size: var(--heading-text-h1);
+  transition: all 0.9s;
 }
 
 h2 {
   font-size: var(--heading-text-h2);
+  transition: all 0.9s;
 }
 
 p {
   font-size: var(--body-text);
+  transition: all 0.9s;
 }
 
 section {
@@ -45,101 +53,24 @@ section {
   padding: 2rem;
 }
 
-.flex-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Vertically aligns the content in the center */
-}
-
-.text-side > p {
-  max-width: 50em;
-}
-
-.half {
-  flex: 1; /* Allows each half to take up equal space */
-  padding: 20px; /* Optional padding */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
-}
-
-.image-side dotlottie-player {
-  max-width: 100%; /* Makes sure the image doesn't overflow its container */
-  height: auto; /* Maintains the image's aspect ratio */
-}
-
-.text-side {
-  display: flex;
-  flex-direction: column; /* Stacks the text and the button vertically */
-  justify-content: center; /* Centers the text and button vertically */
-  align-items: flex-start; /* Aligns the text and button to the left */
-}
-
-button {
-  margin-top: 20px; /* Adds some spacing between the text and the button */
-}
-
-/* For smaller screens - stacked view */
 @media (max-width: 1200px) {
-  .flex-section {
-    flex-direction: column;
+  h1 {
+    font-size: var(--Mheading-text-h1);
   }
 
-  .half {
-    width: 100%; /* Allows each half to take up the full width of the viewport */
+  h2 {
+    font-size: var(--Mheading-text-h2);
+  }
+
+  p {
+    font-size: var(--Mbody-text);
+  }
+
+  section {
+    border-bottom: solid 4px var(--black);
+    padding: 2rem;
   }
 }
 
-.services-section {
-  margin: 5rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em; /* Gap between each service block */
-  max-width: 110rem;
-}
 
-.flex-sub-hero {
-  display: flex;
-  flex-direction: column; /* This stacks the items vertically */
-  align-items: center; /* This centers items horizontally by default */
-  width: 100%;
-}
 
-.flex-item {
-  width: 100%;
-  margin: 10px 0; /* Space between rows */
-}
-
-.flex-item > img {
-  width: 15%;
-  margin: 10px 0;
-}
-
-.text p {
-  text-align: left;
-  margin-left: 10px; /* Some space from the left edge */
-  max-width: 50em;
-}
-
-.center {
-  display: flex;
-  justify-content: center; /* Horizontally center the button */
-}
-
-.flex-sub-hero {
-  flex: 0 0 calc(33.33% - 20px); /* Explicitly define flex-grow as 0 to avoid any growth */
-  box-sizing: border-box;
-  text-align: center;
-  border: solid 2px var(--black);
-  top: 0;
-  left: 0;
-  transition: all 0.15s linear 0s;
-  position: relative;
-  display: inline-block;
-  padding: 15px 25px;
-  background-color: rgb(255, 159, 236);
-  text-transform: uppercase;
-  color: black;
-  letter-spacing: 1px;
-  box-shadow: -8px 8px 0 black;
-  text-decoration: none;
-  border-style: solid;
-}

@@ -1,0 +1,67 @@
+---
+import CtaButton from "./CtaButton.astro";
+---
+
+<div class="image-content-container">
+  <img
+    src="images/lighticon.svg"
+    alt="Description of Image"
+    class="left-image"
+  />
+  <div class="right-content">
+    <p>
+      In today's world, everyone's online. Your website? It's your digital
+      hello. But it's crowded out there, so why blend in? I'm here to help craft
+      a site that's as unique as you. Let's make something awesome and
+      unforgettable together.
+    </p>
+    <CtaButton buttonText="Get Started" />
+  </div>
+</div>
+
+<style>
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(-2deg);
+    }
+  }
+
+  .image-content-container {
+    display: flex;
+    align-items: center;
+    max-width: 110rem;
+    margin: 0 auto; 
+  }
+
+  .left-image {
+    max-width: 20%; 
+    height: auto;
+    animation: rotateAnimation 3s infinite;
+  }
+
+  .right-content {
+    padding-left: 2rem; 
+  }
+
+  @media (max-width: 1000px) {
+    .image-content-container {
+      flex-direction: column;
+    }
+
+    .left-image {
+      max-width: 20%;
+      margin-bottom: 1rem;
+    }
+
+    .right-content {
+      padding-left: 0;
+      text-align: justify;
+    }
+  }
+</style>

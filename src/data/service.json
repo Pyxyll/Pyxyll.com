@@ -1,0 +1,32 @@
+[
+  {
+    "Title": "Web Development",
+    "Image": "/images/webdevicon.svg",
+    "Text": "Crafting digital experiences tailored to your vision. From initial idea to final pixel, we ensure your site stands out and speaks to your audience."
+  },
+  {
+    "Title": "Hosting",
+    "Image": "/images/hostingicon.svg",
+    "Text": "Our hosting is more than just space; it's peace of mind. Rely on us for high-speed, secure, and consistently smooth hosting that keeps your website performing at its peak."
+  },
+  {
+    "Title": "Email",
+    "Image": "/images/emailicon.svg",
+    "Text": "In the age of instant communication, you need an email service that's both reliable and efficient. With our solutions, you're always connected and your messages shine through."
+  },
+  {
+    "Title": "Maintenence",
+    "Image": "/images/maintenenceicon.svg",
+    "Text": "Digital landscapes change, but our commitment doesn't. Regular updates, prompt fixes, and a fresh look ensure your site remains at the forefront and functions without a hitch."
+  },
+  {
+    "Title": "SEO",
+    "Image": "/images/seoicon.svg",
+    "Text": "In the vast world of the web, stand out where it counts. Our SEO strategies not only boost your site’s visibility but ensure you reach the right audience at the right time."
+  },
+  {
+    "Title": "Support",
+    "Image": "/images/supporticon.svg",
+    "Text": "Behind every great website is a dedicated team. Whether it's a minor hiccup or a major query, our support crew is just a click away, ready to assist."
+  }
+]
