@@ -1,0 +1,42 @@
+[
+  {
+    "title": "HTML",
+    "image": "/images/stack/htmlico.svg"
+  },
+  {
+    "title": "CSS",
+    "image": "/images/stack/cssico.svg"
+  },
+  {
+    "title": "JavaScript",
+    "image": "/images/stack/jsico.svg"
+  },
+  {
+    "title": "Node.js",
+    "image": "/images/stack/nodeico.svg"
+  },
+  {
+    "title": "Astro",
+    "image": "/images/stack/astroico.svg"
+  },
+  {
+    "title": "Tailwind",
+    "image": "/images/stack/tailwindico.svg"
+  },
+  {
+    "title": "Strapi",
+    "image": "/images/stack/strapiico.svg"
+  },
+  {
+    "title": "SupaBase",
+    "image": "/images/stack/supabaseico.svg"
+  },
+  {
+    "title": "Vercel",
+    "image": "/images/stack/vercelico.svg"
+  },
+  {
+    "title": "Wordpress",
+    "image": "/images/stack/wordpressico.svg"
+  }
+]

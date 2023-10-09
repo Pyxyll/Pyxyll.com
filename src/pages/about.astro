@@ -6,15 +6,13 @@ import CtaButton from "../components/CtaButton.astro";
 import TechStack from "../components/TechStack.astro";
 ---
 
-<Main>
-  <section transition:name="section">
-    <FSflex
-      image="images/offsetlogo.svg"
-      text="Hey there! Welcome to Pyxyll. Ever felt like you're seeing the same website over and over again? In a world where digital designs often feel like déjà vu, we're on a mission to shake things up. Because why settle for the ordinary when you can have extraordinary? Here, we're not just about pixels and code (although we're pretty geeky about that too). We believe in breaking the mold, thinking outside the box, and most importantly, having a blast while doing it. It's high time to bring back the fun, the flair, and the unexpected into the world of web design!"
-    />
-  </section>
+<Main title="Pyxyll - About">
+  <FSflex
+    image="images/offsetlogo.svg"
+    text="Hey there! Welcome to Pyxyll. Ever felt like you're seeing the same website over and over again? In a world where digital designs often feel like déjà vu, we're on a mission to shake things up. Because why settle for the ordinary when you can have extraordinary? Here, we're not just about pixels and code (although we're pretty geeky about that too). We believe in breaking the mold, thinking outside the box, and most importantly, having a blast while doing it. It's high time to bring back the fun, the flair, and the unexpected into the world of web design!"
+  />
 
-  <section class="process-section">
+  <section class="process-section" transition:name="hero">
     <div class="process-container">
       <ProcessStep
         step="01."
@@ -103,26 +101,7 @@ import TechStack from "../components/TechStack.astro";
     </div>
   </section>
 
-  <section>
-    <div class="flex-sub-hero">
-      <div class="flex-item center">
-        <img class="service-icon" src="images/lighticon.svg" alt="" />
-      </div>
-      <div class="flex-item text center">
-        <p>
-          In today's world, everyone's online. Your website? It's your digital
-          hello. But it's crowded out there, so why blend in? I'm here to help
-          craft a site that's as unique as you. Let's make something awesome and
-          unforgettable together.
-        </p>
-      </div>
-
-      <!-- Third row: Centered Button -->
-      <div class="flex-item center">
-        <CtaButton />
-      </div>
-    </div>
-  </section>
+  <section></section>
 </Main>
 
 <style>
