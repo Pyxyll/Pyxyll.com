@@ -1,0 +1,28 @@
+---
+import ProcessStep from "../components/ProcessStep.astro";
+import process from "../data/process.json";
+---
+
+<div class="process-container">
+  {
+    process.map((process) => {
+      return (
+        <ProcessStep
+          step={process.step}
+          title={process.title}
+          text={process.text}
+        />
+      );
+    })
+  }
+</div>
+
+<style>
+  .process-container {
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em; /* Gap between each service block */
+    max-width: 110rem;
+  }
+</style>
