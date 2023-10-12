@@ -22,35 +22,30 @@
     "images/stack/wordpressico.svg",
   ];
 
-  let speed = 2; // pixels per frame
-  let position = 0;
+  let speed = 1; // pixels per frame
   let carousel;
 
   import { onMount } from "svelte";
 
   onMount(() => {
-    function animate() {
-      position += speed;
+    requestAnimationFrame(function scroll() {
+      carousel.scrollLeft += speed;
 
-      if (position >= carousel.firstChild.offsetWidth) {
+      if (carousel.scrollLeft >= carousel.firstChild.offsetWidth) {
         carousel.appendChild(carousel.firstChild);
-        position -= carousel.firstChild.offsetWidth;
+        carousel.scrollLeft -= carousel.firstChild.offsetWidth;
       }
 
-      carousel.style.transform = `translateX(-${position}px)`;
-
-      requestAnimationFrame(animate);
-    }
-
-    animate();
+      requestAnimationFrame(scroll);
+    });
   });
 
   function handleMouseOver() {
-    speed = 1; // slow down
+    speed = 0.1; // slow down
   }
 
   function handleMouseOut() {
-    speed = 2; // return to original speed
+    speed = 0.5; // return to original speed
   }
 </script>
 
@@ -60,7 +55,7 @@
   on:mouseover={handleMouseOver}
   on:mouseout={handleMouseOut}
 >
-  {#each icons as icon (icon)}
+  {#each icons as icon}
     <img src={icon} alt="Icon" class="icon-item" />
   {/each}
 </div>
