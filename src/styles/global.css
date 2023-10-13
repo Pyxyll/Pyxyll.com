@@ -8,7 +8,7 @@
   --heading-text-h1: 2em;
   --heading-text-h2: 1.5em;
   --body-text: 1.2em;
-  --Mheading-text-h1: 1.5em;
+  --Mheading-text-h1: 1.3em;
   --Mheading-text-h2: 1em;
   --Mbody-text: 1.1em;
   font-family: "JetBrains Mono", sans-serif;
@@ -50,12 +50,21 @@ p {
 
 section {
   border-bottom: solid 4px var(--black);
-  padding: 2rem;
+  padding: 10rem 2rem;
+}
+
+.hero-offset {
+  border-bottom: solid 0px;
+  padding: 10rem 2rem;
 }
 
 @media (max-width: 1200px) {
   h1 {
     font-size: var(--Mheading-text-h1);
+  }
+
+  h1 > span {
+    font-size: 1px;
   }
 
   h2 {

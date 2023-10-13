@@ -1,26 +1,14 @@
 ---
-// HeroSection.astro
-// import LottieAnimation from "./LottieAnimation.astro";
 import CtaButton from "./CtaButton.astro";
 ---
 
-<div class="hero">
-  <div class="lottie-section">
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"></script>
-    <dotlottie-player
-      src="https://lottie.host/b4475a92-e45d-473d-96f3-a8472db181d2/7yso4KxMgV.lottie"
-      background="transparent"
-      speed="1.5"
-      style="max-width: 800px"
-      direction="1"
-      mode="normal"
-      loop
-      autoplay></dotlottie-player>
-  </div>
-  <div class="content-section">
-    <h1>Welcome to Pyxyll</h1>
+<div class="hero-section">
+  <div class="content">
+    <h1>
+      <span>Design.</span>
+      <span class="outline">Develop.</span>
+      <span>Deploy.</span>
+    </h1>
     <p>
       At Pyxyll, we dont just design and code — we craft online experiences.
       Every pixel has its purpose, every line of code its place. Jump into our
@@ -29,29 +17,56 @@ import CtaButton from "./CtaButton.astro";
     </p>
     <CtaButton buttonText="Get Started" />
   </div>
+  <div class="image-container">
+    <img src="images/hero.svg" alt="Description of Image" />
+  </div>
 </div>
 
 <style>
-  .hero {
+  /* General Styling */
+
+  .hero-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto; /* Center the section if viewport width > 1600px */
   }
 
-  .lottie-section,
-  .content-section {
+  h1 span {
+    display: block;
+    font-size: 4em;
+  }
+
+  .outline {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    fill: none;
+    color: #f5f5f5;
+  }
+
+  .content {
     flex: 1;
-    max-width: 50%;
-    padding: 2rem;
+    padding: 20px; /* Adjust as necessary */
   }
 
-  @media (max-width: 1000px) {
-    .hero {
+  .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .hero-section {
       flex-direction: column;
     }
-    .lottie-section,
-    .content-section {
-      max-width: 100%;
+    .image-container {
+      display: none;
     }
   }
 </style>

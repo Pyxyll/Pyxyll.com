@@ -1,14 +1,50 @@
 ---
 import Main from "../layouts/Main.astro";
 import ServiceSection from "../components/ServiceSection.astro";
-import Hero2 from "../components/Hero2.astro";
+import Hero from "../components/Hero.astro";
+import Banner from "../components/Banner.astro";
 import SubFooter from "../components/SubFooter.astro";
 ---
 
 <Main title="Pyxyll - Home">
-  <section>
-    <Hero2 />
+  <section class="hero-offset">
+    <Hero />
   </section>
+
+  <Banner />
+  <!-- <div class="banner-container">
+    <div class="banner2">
+      <div class="banner">
+        <h2 class="banner-text">
+          Identity. Defined. <img
+            class="imagedivider"
+            src="images/bannerDivider.svg"
+            alt=""
+          />
+           Identity. Defined. <img
+            class="imagedivider"
+            src="images/bannerDivider.svg"
+            alt=""
+          />
+           Identity. Defined. <img
+            class="imagedivider"
+            src="images/bannerDivider.svg"
+            alt=""
+          />
+           Identity. Defined. <img
+            class="imagedivider"
+            src="images/bannerDivider.svg"
+            alt=""
+          />
+           Identity. Defined. <img
+            class="imagedivider"
+            src="images/bannerDivider.svg"
+            alt=""
+          />
+        </h2>
+      </div>
+    </div>
+  </div> -->
 
   <section>
     <ServiceSection />

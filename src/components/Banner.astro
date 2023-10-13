@@ -1,0 +1,63 @@
+---
+let repeatCount = 6;
+---
+
+<style>
+  .container {
+    overflow: hidden;
+  }
+
+  .banner {
+    background-color: #191919;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    background-color: #191919;
+    width: 200%;
+    height: 10rem;
+    color: var(--white);
+    font-size: 3rem;
+    animation: scrollText 10s linear infinite;
+  }
+
+  .banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    top: 0;
+  }
+
+  .imagedivider {
+    display: inline;
+    width: 50px;
+    padding-right: 20px;
+  }
+
+  @keyframes scrollText {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+</style>
+
+<div class="banner-container">
+  <div class="banner">
+    <h2 class="banner-text">
+      {
+        Array.from({ length: repeatCount }).map(() => (
+          <>
+            Identity. Defined.{" "}
+            <img
+              class="imagedivider"
+              src="images/bannerDivider.svg"
+              alt="Banner Divider"
+            />
+          </>
+        ))
+      }
+    </h2>
+  </div>
+</div>
