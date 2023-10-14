@@ -1,30 +1,34 @@
 ---
-let repeatCount = 6;
+let repeatCount = 13;
+const { text, image, rotation } = Astro.props;
 ---
 
-<style>
-  .container {
+<style define:vars={{ rotation }}>
+  /* .banner-container {
     overflow: hidden;
-  }
+  } */
 
   .banner {
     background-color: #191919;
     white-space: nowrap;
     overflow: hidden;
-    position: relative;
     display: inline-block;
     background-color: #191919;
     width: 200%;
     height: 10rem;
     color: var(--white);
     font-size: 3rem;
-    animation: scrollText 10s linear infinite;
+    rotate: var(--rotation);
+    margin-left: -5px;
   }
 
   .banner-text {
+    animation: scrollText 20s linear infinite;
+    position: relative;
     display: inline-block;
     white-space: nowrap;
-    top: 0;
+    font-weight: 500;
+    top: 1em;
   }
 
   .imagedivider {
@@ -38,26 +42,21 @@ let repeatCount = 6;
       left: 0%;
     }
     100% {
-      left: -100%;
+      left: -95%;
     }
   }
 </style>
 
 <div class="banner-container">
   <div class="banner">
-    <h2 class="banner-text">
+    <div class="banner-text">
       {
         Array.from({ length: repeatCount }).map(() => (
           <>
-            Identity. Defined.{" "}
-            <img
-              class="imagedivider"
-              src="images/bannerDivider.svg"
-              alt="Banner Divider"
-            />
+            {text} <img class="imagedivider" src={image} alt="Banner Divider" />
           </>
         ))
       }
-    </h2>
+    </div>
   </div>
 </div>
