@@ -35,7 +35,7 @@
   }
 </script>
 
-<form action="/api/contact.cjs" method="POST" enctype="multipart/form-data">
+<form action="/api/contact" method="POST" enctype="multipart/form-data">
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
       <label for="name">Enter your name:</label>
@@ -217,11 +217,6 @@
   }
 
   /* Labels and textual content */
-  label,
-  p {
-    display: block;
-    margin-bottom: 10px;
-  }
   .review-box {
     border: 2px solid #000;
     padding: 10px;
