@@ -1,6 +1,6 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-module.exports = async (req, res) => {
+export default async function (req, res) {
     const { name, email, domain, subject, message, file } = req.body;
 
     // Create a transporter using nodemailer (for this example, we'll use Gmail)
