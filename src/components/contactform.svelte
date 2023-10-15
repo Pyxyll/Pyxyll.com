@@ -25,23 +25,8 @@
     nextStep(); // Automatically move to next step if a file is selected.
   }
 
-  function submitForm(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target); // Assuming the form element is the event target
-
-    fetch("/api/contact", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the response here. For example, show a success message.
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+  function submitForm() {
+    // Handle form submission logic here, e.g., sending data to server
   }
 
   function goToStep(s) {
@@ -50,7 +35,7 @@
   }
 </script>
 
-<form on:submit={submitForm}>
+<form action="/api/contact" method="POST" enctype="multipart/form-data">
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
       <label for="name">Enter your name:</label>
@@ -184,7 +169,7 @@
           </li>
         {/if}
       </ul>
-      <button type="submit">Submit</button>
+      <button on:click={submitForm}>Submit</button>
     </div>
   {:else}
     <div>
