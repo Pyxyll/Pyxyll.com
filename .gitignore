@@ -21,9 +21,6 @@ content.md
 # macOS-specific files
 .DS_Store
 
-#video
-data.json
-Comp 1.mp4
-vid_0.c4d
-geo.c4d
-heroanimation*.aep
+#Design Elements
+heroelements.ai
+
