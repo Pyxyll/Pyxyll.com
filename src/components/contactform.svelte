@@ -25,9 +25,9 @@
     nextStep(); // Automatically move to next step if a file is selected.
   }
 
-  function submitForm() {
-    // Handle form submission logic here, e.g., sending data to server
-  }
+  // function submitForm() {
+  //   // Handle form submission logic here, e.g., sending data to server
+  // }
 
   function goToStep(s) {
     step = s;
@@ -169,7 +169,7 @@
           </li>
         {/if}
       </ul>
-      <button on:click={submitForm}>Submit</button>
+      <button type="submit">Submit</button>
     </div>
   {:else}
     <div>
