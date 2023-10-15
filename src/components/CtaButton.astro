@@ -2,7 +2,10 @@
 const { buttonText } = Astro.props;
 ---
 
-<a href="#" class="btn">{buttonText}</a>
+<a href="#" class="btn"
+  >{buttonText}
+  <img class="arrow" src="images/UI/arrow-down-right.svg" alt="" /></a
+>
 
 <style>
   .btn {
@@ -24,6 +27,17 @@ const { buttonText } = Astro.props;
     top: 3px;
     left: 3px;
     box-shadow: 3px 3px 0 black;
+  }
+  .arrow {
+    width: 15px;
+    padding: 0px 0px 0px 10px;
+    transition: 0.3s;
+  }
+
+  .btn:hover .arrow {
+    transform: rotate(-45deg) translateX(5px) translateY(3px);
+    transition: 0.3s;
+    padding: 0px 20px 0px 15px;
   }
   .btn:hover::after {
     top: 1px;
