@@ -31,7 +31,7 @@
   }
 </script>
 
-<form action="/api/contact" method="POST" enctype="multipart/form-data">
+<form action="/api/contact.cjs" method="POST" enctype="multipart/form-data">
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
       <label for="name">Enter your name:</label>
