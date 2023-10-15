@@ -25,13 +25,32 @@
     nextStep(); // Automatically move to next step if a file is selected.
   }
 
+  function submitForm(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target); // Assuming the form element is the event target
+
+    fetch("/api/contact", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle the response here. For example, show a success message.
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+
   function goToStep(s) {
     step = s;
     editing = true;
   }
 </script>
 
-<form action="/api/contact.cjs" method="POST" enctype="multipart/form-data">
+<form on:submit={submitForm}>
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
       <label for="name">Enter your name:</label>
