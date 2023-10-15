@@ -2,6 +2,7 @@ import nodemailer from 'nodemailer';
 
 export default async function (req, res) {
     const { name, email, domain, subject, message, file } = req.body;
+    console.log(req.body)
 
     // Create a transporter using nodemailer (for this example, we'll use Gmail)
     let transporter = nodemailer.createTransport({
