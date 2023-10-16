@@ -54,7 +54,7 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-  <input type="hidden" name="access_key" value="process.env.API_KEY" />
+  <input type="hidden" name="access_key" value={process.env.API_KEY} />
   {#if step === 0}
     <div name="name" in:fade={{ duration: 300 }}>
       <label name="name" for="name">Enter your name:</label>
