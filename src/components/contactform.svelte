@@ -26,10 +26,6 @@
     nextStep(); // Automatically move to next step if a file is selected.
   }
 
-  // function submitForm() {
-  //   // Handle form submission logic here, e.g., sending data to server
-  // }
-
   function goToStep(s) {
     step = s;
     editing = true;
@@ -58,15 +54,11 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
+  <input type="hidden" name="access_key" value="process.env.API_KEY" />
   {#if step === 0}
-    <div in:fade={{ duration: 300 }}>
-      <input
-        type="hidden"
-        name="access_key"
-        value="ce96f656-987d-4f11-9b93-1722f9b23de1"
-      />
-      <label for="name">Enter your name:</label>
-      <input type="text" bind:value={name} />
+    <div name="name" in:fade={{ duration: 300 }}>
+      <label name="name" for="name">Enter your name:</label>
+      <input type="text" bind:value={name} name="name" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
         <button
@@ -80,7 +72,7 @@
   {:else if step === 1}
     <div in:fade={{ duration: 300 }}>
       Hi there {name},👋 can I get your email?:
-      <input type="email" bind:value={email} />
+      <input type="email" bind:value={email} name="email" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
         <button
@@ -93,8 +85,8 @@
     </div>
   {:else if step === 2}
     <div in:fade={{ duration: 300 }}>
-      Thanks, {name}. We will use {email} to contact you! What's your domain?
-      <input type="text" bind:value={domain} />
+      Thanks, {name}. I will use {email} to contact you! What's your domain?
+      <input type="text" bind:value={domain} name="domain" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
         <button
@@ -108,7 +100,7 @@
   {:else if step === 3}
     <div in:fade={{ duration: 300 }}>
       Great! What's the subject of your message?
-      <input type="text" bind:value={subject} />
+      <input type="text" bind:value={subject} name="subject" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
         <button
@@ -122,7 +114,7 @@
   {:else if step === 4}
     <div in:fade={{ duration: 300 }}>
       So this is about {subject} Could you provide more details in a message, {name}?
-      <textarea bind:value={message} />
+      <textarea bind:value={message} name="message" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
         <button
@@ -136,7 +128,7 @@
   {:else if step === 5}
     <div in:fade={{ duration: 300 }}>
       Would you like to upload a file?
-      <input type="file" on:change={handleFileChange} />
+      <input type="file" on:change={handleFileChange} name="file" />
       <button on:click={() => nextStep(true)}>Skip</button>
       {#if editing}
         <button
@@ -196,13 +188,16 @@
           </li>
         {/if}
       </ul>
+      <input type="hidden" name="name" bind:value={name} />
+      <input type="hidden" name="email" bind:value={email} />
+      <input type="hidden" name="domain" bind:value={domain} />
+      <input type="hidden" name="subject" bind:value={subject} />
+      <input type="hidden" name="message" bind:value={message} />
       <input type="submit" />
     </div>
   {:else}
     <div>
-      Thank you, {name}! Your information has been submitted and we will get
-      back to you ASAP regarding your query about {subject}
-      <!-- You can add the logic to send the form data to the server here. -->
+      {status}
     </div>
   {/if}
 </form>
