@@ -9,6 +9,7 @@
   let message = "";
   let file;
   let editing = false;
+  let status = "";
 
   function nextStep(skip = false) {
     if (step === 0 && name) step += 1;
@@ -33,11 +34,37 @@
     step = s;
     editing = true;
   }
+
+  const handleSubmit = async (data) => {
+    status = "Submitting...";
+    const formData = new FormData(data.currentTarget);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+      status = result.message || "Success";
+    }
+  };
 </script>
 
-<form action="/api/contact.mjs" method="POST" enctype="multipart/form-data">
+<form on:submit|preventDefault={handleSubmit}>
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
+      <input
+        type="hidden"
+        name="access_key"
+        value="ce96f656-987d-4f11-9b93-1722f9b23de1"
+      />
       <label for="name">Enter your name:</label>
       <input type="text" bind:value={name} />
       <button on:click={nextStep}>Next</button>
@@ -169,7 +196,7 @@
           </li>
         {/if}
       </ul>
-      <button type="submit">Submit</button>
+      <input type="submit" />
     </div>
   {:else}
     <div>

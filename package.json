@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/svelte": "^4.0.3",
     "astro": "^3.2.2",
-    "nodemailer": "^6.9.6",
     "svelte": "^4.2.1"
   }
 }
