@@ -10,6 +10,7 @@
   let file;
   let editing = false;
   let status = "";
+  const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
   function nextStep(skip = false) {
     if (step === 0 && name) step += 1;
@@ -54,7 +55,7 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-  <input type="hidden" name="access_key" value={process.env.API_KEY} />
+  <input type="hidden" name="access_key" value={accessKey} />
   {#if step === 0}
     <div name="name" in:fade={{ duration: 300 }}>
       <label name="name" for="name">Enter your name:</label>
