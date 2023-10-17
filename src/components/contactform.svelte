@@ -57,9 +57,9 @@
 <form on:submit|preventDefault={handleSubmit}>
   <input type="hidden" name="access_key" value={accessKey} />
   {#if step === 0}
-    <div name="name" in:fade={{ duration: 300 }}>
-      <label name="name" for="name">Enter your name:</label>
-      <input type="text" bind:value={name} name="name" />
+    <div in:fade={{ duration: 300 }}>
+      <label for="name">Enter your name:</label>
+      <input bind:value={name} name="name" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
         <button
@@ -86,7 +86,7 @@
     </div>
   {:else if step === 2}
     <div in:fade={{ duration: 300 }}>
-      Thanks, {name}. I will use {email} to contact you! What's your domain?
+      Thanks, {name}. I will use {email} to contact you!📨 What's your domain?
       <input type="text" bind:value={domain} name="domain" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
@@ -225,7 +225,8 @@
   }
 
   /* Button styles */
-  button {
+  button,
+  input[type="submit"] {
     padding: 10px 20px;
     border: 2px solid #000;
     background-color: #fff;
@@ -235,7 +236,8 @@
   }
 
   /* Hover effect for buttons */
-  button:hover {
+  button:hover,
+  input[type="submit"]:hover {
     background-color: #f1f1f1;
   }
 
