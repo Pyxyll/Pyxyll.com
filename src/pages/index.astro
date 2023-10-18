@@ -2,7 +2,7 @@
 import Main from "../layouts/Main.astro";
 import ServiceSection from "../components/ServiceSection.astro";
 import Hero from "../components/Hero.astro";
-import Banner from "../components/Banner.astro";
+import Banner from "../components/Banner.svelte";
 import SubFooter from "../components/SubFooter.astro";
 ---
 
@@ -12,6 +12,7 @@ import SubFooter from "../components/SubFooter.astro";
   </section>
 
   <Banner
+    repeatCount={13}
     text="Identity. Defined. "
     image="images/bannerDivider.svg"
     rotation="-2deg"
@@ -21,9 +22,10 @@ import SubFooter from "../components/SubFooter.astro";
     <ServiceSection />
   </section>
   <Banner
-    text="Let's Get To The Good Bit "
-    image="images/bannerDivider.svg"
-    rotation="2deg"
+  repeatCount={13}
+  text="Let's Get To The Good Bit "
+  image="images/bannerDivider.svg"
+  rotation="2deg"
   />
   <section>
     <SubFooter />

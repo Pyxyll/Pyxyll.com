@@ -17,16 +17,12 @@
       <a href="works">Works</a>
       <a href="contact">Contact</a>
     </div>
-    <!-- <button
-      class="mobile-dropdown-toggle"
-      on:click={toggleMobileNav}
-      aria-hidden="true"
-    /> -->
     <div
       class="mobile-dropdown-toggle"
       on:click={toggleMobileNav}
       aria-hidden="true"
     >
+      <!-- svelte-ignore a11y-invalid-attribute -->
       <a href="#" class="ham-menu">
         <span class="bar" />
         <span class="bar" />

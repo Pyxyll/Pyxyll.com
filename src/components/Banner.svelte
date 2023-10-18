@@ -1,13 +1,21 @@
----
-let repeatCount = 13;
-const { text, image, rotation } = Astro.props;
----
+<script>
+  export let repeatCount = 13;
+  export let text;
+  export let image;
+  export let rotation;
+</script>
 
-<style define:vars={{ rotation }}>
-  /* .banner-container {
-    overflow: hidden;
-  } */
+<div class="banner-container" style="--rotation: {rotation}">
+  <div class="banner">
+    <div class="banner-text">
+      {#each Array(repeatCount).fill() as _}
+        {text} <img class="imagedivider" src={image} alt="Banner Divider" />
+      {/each}
+    </div>
+  </div>
+</div>
 
+<style>
   .banner {
     background-color: #191919;
     white-space: nowrap;
@@ -16,9 +24,9 @@ const { text, image, rotation } = Astro.props;
     background-color: #191919;
     width: 200%;
     height: 10rem;
-    color: var(--white);
+    color: white;
     font-size: 3rem;
-    rotate: var(--rotation);
+    transform: rotate(var(--rotation));
     margin-left: -5px;
     padding-right: 10px;
   }
@@ -53,17 +61,3 @@ const { text, image, rotation } = Astro.props;
     }
   }
 </style>
-
-<div class="banner-container">
-  <div class="banner">
-    <div class="banner-text">
-      {
-        Array.from({ length: repeatCount }).map(() => (
-          <>
-            {text} <img class="imagedivider" src={image} alt="Banner Divider" />
-          </>
-        ))
-      }
-    </div>
-  </div>
-</div>
