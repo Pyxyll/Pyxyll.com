@@ -17,15 +17,55 @@
       <a href="works">Works</a>
       <a href="contact">Contact</a>
     </div>
-    <button
+    <!-- <button
       class="mobile-dropdown-toggle"
       on:click={toggleMobileNav}
       aria-hidden="true"
-    />
+    /> -->
+    <div
+      class="mobile-dropdown-toggle"
+      on:click={toggleMobileNav}
+      aria-hidden="true"
+    >
+      <a href="#" class="ham-menu">
+        <span class="bar" />
+        <span class="bar" />
+        <span class="bar" />
+      </a>
+    </div>
   </nav>
 </header>
 
 <style>
+  .ham-menu {
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    cursor: pointer;
+    align-items: end;
+    margin-top: -15px;
+  }
+
+  .bar {
+    background-color: var(--black);
+    color: black;
+    height: 4px;
+    margin: 3px;
+    transition: 0.2s;
+  }
+
+  .bar:nth-child(1) {
+    width: 20px;
+  }
+
+  .bar:nth-child(2) {
+    width: 30px;
+  }
+
+  .bar:nth-child(3) {
+    width: 15px;
+  }
   header {
     background: var(--white);
     border-top: solid 4px var(--black);
@@ -76,39 +116,6 @@
 
     .mobile-dropdown-toggle {
       display: inline-block;
-      width: 30px;
-      height: 2px;
-      background-color: currentColor;
-      position: relative;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .mobile-dropdown-toggle:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Or any color you prefer */
-    }
-
-    .mobile-dropdown-toggle::before,
-    .mobile-dropdown-toggle::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: currentColor;
-      position: absolute;
-      left: 0;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-
-    .mobile-dropdown-toggle::before {
-      top: -10px; /* position the top line */
-    }
-
-    .mobile-dropdown-toggle::after {
-      bottom: -10px; /* position the bottom line */
     }
 
     .dropdown-link-container {
