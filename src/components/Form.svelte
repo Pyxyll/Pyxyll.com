@@ -55,7 +55,11 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-  <input type="hidden" name="access_key" value={accessKey} />
+  <input
+    type="hidden"
+    name="access_key"
+    value="ce96f656-987d-4f11-9b93-1722f9b23de1"
+  />
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
       <label for="name">Enter your name:</label>
