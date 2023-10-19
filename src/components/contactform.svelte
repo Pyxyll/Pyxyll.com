@@ -10,7 +10,7 @@
   let file;
   let editing = false;
   let status = "";
-  const accessKey = import.meta.env.ACCESS_KEY;
+  const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
   function nextStep(skip = false) {
     if (step === 0 && name) step += 1;
