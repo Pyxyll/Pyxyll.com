@@ -61,7 +61,7 @@
   />
   {#if step === 0}
     <div in:fade={{ duration: 300 }}>
-      <label for="name">Enter your name:</label>
+      <label for="name">Howdy Stranger, Let's get acquainted.</label>
       <input bind:value={name} name="name" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
@@ -117,7 +117,7 @@
     </div>
   {:else if step === 4}
     <div in:fade={{ duration: 300 }}>
-      So this is about {subject} Could you provide more details in a message, {name}?
+      So this is about {subject} Could you provide more details?
       <textarea bind:value={message} name="message" />
       <button on:click={nextStep}>Next</button>
       {#if editing}
@@ -131,7 +131,7 @@
     </div>
   {:else if step === 5}
     <div in:fade={{ duration: 300 }}>
-      Would you like to upload a file?
+      If you have any additional information you can upload it here!
       <input type="file" on:change={handleFileChange} name="file" />
       <button on:click={() => nextStep(true)}>Skip</button>
       {#if editing}
