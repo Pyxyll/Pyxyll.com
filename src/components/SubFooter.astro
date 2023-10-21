@@ -3,17 +3,11 @@ import CtaButton from "./CtaButton.astro";
 ---
 
 <div class="image-content-container">
-  <img
-    src="images/lighticon.svg"
-    alt="Description of Image"
-    class="left-image"
-  />
+  <img src="images/phone.svg" alt="Description of Image" class="left-image" />
   <div class="right-content">
     <p>
-      In today's world, everyone's online. Your website? It's your digital
-      hello. But it's crowded out there, so why blend in? I'm here to help craft
-      a site that's as unique as you. Let's make something awesome and
-      unforgettable together.
+      So what does all of this mean? It means I can take you from initial idea to final product and provide the support for it all.
+      So if you need a brand new site, or maintenence on an exsiting deployment, let's talk about it.
     </p>
     <CtaButton buttonText="Get Started" />
   </div>
@@ -22,13 +16,13 @@ import CtaButton from "./CtaButton.astro";
 <style>
   @keyframes rotateAnimation {
     0% {
-      transform: rotate(-2deg);
+      transform: translateY(2px);
     }
     50% {
-      transform: rotate(2deg);
+      transform: translateY(10px);
     }
     100% {
-      transform: rotate(-2deg);
+      transform: translateY(2px);
     }
   }
 
@@ -40,7 +34,7 @@ import CtaButton from "./CtaButton.astro";
   }
 
   .left-image {
-    max-width: 20%;
+    max-width: 40%;
     height: auto;
     animation: rotateAnimation 3s infinite;
   }

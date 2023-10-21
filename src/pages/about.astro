@@ -1,28 +1,56 @@
 ---
 import Main from "../layouts/Main.astro";
-import FSflex from "../components/FSflex.astro";
+import CtaButton from "../components/CtaButton.astro";
 import ProcessSection from "../components/ProcessSection.astro";
-import TechStack from "../components/TechStack.astro";
 import IconSlider from "../components/IconSlider.astro";
+import TestimonialSlider from "../components/TestimonialSection.astro";
 ---
 
 <Main title="Pyxyll - About">
   <section>
-    <FSflex
-      image="images/offsetlogo.svg"
-      text="Hey there! Welcome to Pyxyll. Ever felt like you're seeing the same website over and over again? In a world where digital designs often feel like déjà vu, we're on a mission to shake things up. Because why settle for the ordinary when you can have extraordinary? Here, we're not just about pixels and code (although we're pretty geeky about that too). We believe in breaking the mold, thinking outside the box, and most importantly, having a blast while doing it. It's high time to bring back the fun, the flair, and the unexpected into the world of web design!"
-    />
+    <div class="container">
+      <h2 class="emphasis">Curious eh?</h2>
+      <p>
+        Well then let's chat! Who am I? I'm <span class="underline">Dylan</span
+        >, a web developer from Ireland. Over time I've noticed the world of
+        online presense has gotten all too <span class="underline"
+          >'same-y'.</span
+        >
+
+         I believe websites should have personality. And that's my mission, to bring
+        back the charm and uniqueness into the online realm. So, while I deal with
+        all the jargon behind the scenes (I promise, you won't have to), you can
+        focus on your goal. But enough about me, I wanna hear about you!
+      </p>
+      <CtaButton buttonText="Let's Chat" />
+    </div>
   </section>
+
   <section>
     <ProcessSection />
   </section>
 
   <section>
-    <IconSlider />
+    <TestimonialSlider />
   </section>
 </Main>
 
 <style>
+  .container {
+    margin: 2em auto;
+    max-width: 1600px;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  .emphasis {
+    font-size: 500%;
+    transform: rotate(-2deg);
+    margin: 0px 0px 40px 0px;
+    color: var(--white);
+    width: 7em;
+    background-color: var(--black);
+  }
   .tech-stack {
     width: 100%;
     padding: 20px;
@@ -31,7 +59,7 @@ import IconSlider from "../components/IconSlider.astro";
   .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Change to flex-start to ensure items always start from the beginning of the row */
+    justify-content: center;
     gap: 20px;
   }
 </style>

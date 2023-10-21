@@ -3,6 +3,10 @@ import ServiceItem from "../components/ServiceItem.astro";
 import service from "../data/service.json";
 ---
 
+<div class="container">
+  <h2 class="emphasis">What I do</h2>
+</div>
+
 <div class="services-section">
   {
     service.map((service) => {
@@ -18,6 +22,18 @@ import service from "../data/service.json";
 </div>
 
 <style>
+  .container {
+    margin: auto;
+    max-width: 110rem;
+  }
+  .emphasis {
+    font-size: 500%;
+    transform: rotate(-2deg);
+    margin: 0px 0px 40px 0px;
+    color: var(--white);
+    width: 5.5em;
+    background-color: var(--black);
+  }
   .services-section {
     margin: 5rem auto;
     display: flex;

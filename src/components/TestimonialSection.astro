@@ -1,0 +1,58 @@
+---
+import TestimonialSlider from "./TestimonialSlider.svelte";
+const testimonials = [
+  {
+    image: "/path_to_image1.jpg",
+    name: "John Doe",
+    content: "This is a testimonial.",
+  },
+  {
+    image: "/path_to_image2.jpg",
+    name: "Jane Smith",
+    content: "Another testimonial.",
+  },
+  {
+    image: "/path_to_image1.jpg",
+    name: "John Doe",
+    content: "This is a testimonial.",
+  },
+  {
+    image: "/path_to_image2.jpg",
+    name: "Jane Smith",
+    content: "Another testimonial.",
+  },
+  {
+    image: "/path_to_image1.jpg",
+    name: "John Doe",
+    content: "This is a testimonial.",
+  },
+  {
+    image: "/path_to_image2.jpg",
+    name: "Jane Smith",
+    content: "Another testimonial.",
+  },
+  {
+    image: "/path_to_image1.jpg",
+    name: "John Doe",
+    content: "This is a testimonial.",
+  },
+  {
+    image: "/path_to_image2.jpg",
+    name: "Jane Smith",
+    content: "Another testimonial.",
+  },
+  {
+    image: "/path_to_image1.jpg",
+    name: "John Doe",
+    content: "This is a testimonial.",
+  },
+  {
+    image: "/path_to_image2.jpg",
+    name: "Jane Smith",
+    content: "Another testimonial.",
+  },
+  // ... other testimonials
+];
+---
+
+<TestimonialSlider testimonials={testimonials} client:load />
