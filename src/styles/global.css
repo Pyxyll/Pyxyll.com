@@ -27,6 +27,10 @@
   background: var(--black);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   margin: 0px;
@@ -59,9 +63,6 @@ section {
 }
 
 @media (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
   h1 {
     font-size: var(--Mheading-text-h1);
   }

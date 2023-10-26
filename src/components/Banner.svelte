@@ -28,7 +28,6 @@
     font-size: 3rem;
     transform: rotate(var(--rotation));
     margin-left: -5px;
-    padding-right: 10px;
   }
 
   .banner-text {
@@ -55,9 +54,12 @@
     }
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     .banner {
-      width: 100%;
+      width: 200%;
+      margin-left: -5px;
+      margin-right: -5px;
+      overflow-x: hidden;
     }
   }
 </style>

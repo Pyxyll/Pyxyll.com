@@ -30,8 +30,9 @@ import service from "../data/service.json";
     font-size: 500%;
     transform: rotate(-2deg);
     margin: 0px 0px 40px 0px;
+    padding: 1rem 2rem;
     color: var(--white);
-    width: 5.5em;
+    display: inline-block;
     background-color: var(--black);
   }
   .services-section {
@@ -40,5 +41,12 @@ import service from "../data/service.json";
     flex-wrap: wrap;
     gap: 1.5em; /* Gap between each service block */
     max-width: 110rem;
+  }
+
+  @media (max-width: 900px) {
+    .emphasis {
+      font-size: 200%;
+      margin: 0px 0px 10px 0px;
+    }
   }
 </style>

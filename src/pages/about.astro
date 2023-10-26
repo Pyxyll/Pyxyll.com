@@ -2,8 +2,7 @@
 import Main from "../layouts/Main.astro";
 import CtaButton from "../components/CtaButton.astro";
 import ProcessSection from "../components/ProcessSection.astro";
-import IconSlider from "../components/IconSlider.astro";
-import TestimonialSlider from "../components/TestimonialSection.astro";
+import TestimonialSlider from "../components/TestimonialSlider.svelte";
 ---
 
 <Main title="Pyxyll - About">
@@ -31,11 +30,18 @@ import TestimonialSlider from "../components/TestimonialSection.astro";
   </section>
 
   <section>
-    <TestimonialSlider />
+    <div class="testimonialContainer">
+      <TestimonialSlider client:load />
+    </div>
   </section>
 </Main>
 
 <style>
+  .testimonialContainer {
+    display: flex;
+    gap: 5rem;
+  }
+
   .container {
     margin: 2em auto;
     max-width: 1600px;
@@ -47,8 +53,9 @@ import TestimonialSlider from "../components/TestimonialSection.astro";
     font-size: 500%;
     transform: rotate(-2deg);
     margin: 0px 0px 40px 0px;
+    padding: 1rem 2rem;
     color: var(--white);
-    width: 7em;
+    display: inline-block;
     background-color: var(--black);
   }
   .tech-stack {

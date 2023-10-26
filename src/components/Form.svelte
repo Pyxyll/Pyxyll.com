@@ -63,7 +63,7 @@
     <div in:fade={{ duration: 300 }}>
       <label for="name">Howdy Stranger, Let's get acquainted.</label>
       <input bind:value={name} name="name" />
-      <button on:click={nextStep}>Next</button>
+      <button type="button" on:click={nextStep}>Next</button>
       {#if editing}
         <button
           on:click={() => {
@@ -77,7 +77,7 @@
     <div in:fade={{ duration: 300 }}>
       Hi there {name},👋 can I get your email?:
       <input type="email" bind:value={email} name="email" />
-      <button on:click={nextStep}>Next</button>
+      <button type="button" on:click={nextStep}>Next</button>
       {#if editing}
         <button
           on:click={() => {
@@ -91,7 +91,7 @@
     <div in:fade={{ duration: 300 }}>
       Thanks, {name}. I will use {email} to contact you!📨 What's your domain?
       <input type="text" bind:value={domain} name="domain" />
-      <button on:click={nextStep}>Next</button>
+      <button type="button" on:click={nextStep}>Next</button>
       {#if editing}
         <button
           on:click={() => {
@@ -105,7 +105,7 @@
     <div in:fade={{ duration: 300 }}>
       Great! What's the subject of your message?
       <input type="text" bind:value={subject} name="subject" />
-      <button on:click={nextStep}>Next</button>
+      <button type="button" on:click={nextStep}>Next</button>
       {#if editing}
         <button
           on:click={() => {
@@ -119,7 +119,7 @@
     <div in:fade={{ duration: 300 }}>
       So this is about {subject} Could you provide more details?
       <textarea bind:value={message} name="message" />
-      <button on:click={nextStep}>Next</button>
+      <button type="button" on:click={nextStep}>Next</button>
       {#if editing}
         <button
           on:click={() => {
@@ -133,7 +133,7 @@
     <div in:fade={{ duration: 300 }}>
       If you have any additional information you can upload it here!
       <input type="file" on:change={handleFileChange} name="file" />
-      <button on:click={() => nextStep(true)}>Skip</button>
+      <button type="button" on:click={() => nextStep(true)}>Skip</button>
       {#if editing}
         <button
           on:click={() => {

@@ -1,7 +1,6 @@
 
-2. sub-hero rebuild.
+
 3. SSR on footer - rebuild in svelte - change layout
-4. create new flexbox layouts. (50/50, 60/40)
 5. Fix Sliders on home and about.
 6. create layout for works page.
 
