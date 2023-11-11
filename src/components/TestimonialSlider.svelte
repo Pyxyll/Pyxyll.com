@@ -23,7 +23,7 @@
 <div class="testimonial-container">
   {#if testimonials.length > 0}
     <div class="testimonial">
-      <img src={testimonials[currentIndex].imgSrc} alt="Testimonial Image" />
+      <img src={testimonials[currentIndex].imgSrc} alt="Testimonials" />
       <h2>{testimonials[currentIndex].name}</h2>
       <p>{testimonials[currentIndex].body}</p>
       <a href={testimonials[currentIndex].link}>Read More</a>

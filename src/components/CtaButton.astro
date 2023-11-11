@@ -1,8 +1,8 @@
 ---
-const { buttonText } = Astro.props;
+const { buttonText, buttonLink } = Astro.props;
 ---
 
-<a href="#" class="btn"
+<a href={buttonLink} class="btn"
   >{buttonText}
   <img class="arrow" src="images/UI/arrow-down-right.svg" alt="" /></a
 >
