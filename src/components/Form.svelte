@@ -25,6 +25,13 @@
     file = event.target.files[0];
     nextStep(); // Automatically move to next step if a file is selected.
   }
+  function handleKeyPress(event) {
+    // Check if Enter key is pressed and not on a textarea to allow line breaks
+    if (event.key === "Enter" && event.target.tagName !== "TEXTAREA") {
+      event.preventDefault(); // Prevent the form from submitting
+      nextStep();
+    }
+  }
 
   function goToStep(s) {
     step = s;
@@ -54,7 +61,8 @@
 </script>
 
 <div class="formWrapper">
-  <form on:submit|preventDefault={handleSubmit}>
+  <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+  <form on:submit|preventDefault={handleSubmit} on:keypress={handleKeyPress}>
     <input
       type="hidden"
       name="access_key"
@@ -67,6 +75,7 @@
         >
         <input
           bind:value={name}
+          autofocus
           name="name"
           type="text"
           placeholder="Your answer here.."
@@ -94,6 +103,7 @@
         <input
           type="email"
           bind:value={email}
+          autofocus
           name="email"
           placeholder="Your answer here.."
           required="true"
@@ -120,6 +130,7 @@
         <input
           type="text"
           bind:value={domain}
+          autofocus
           name="domain"
           placeholder="Your answer here.."
           required="true"
@@ -146,6 +157,7 @@
         <input
           type="text"
           bind:value={subject}
+          autofocus
           name="subject"
           placeholder="Your answer here.."
           required="true"
@@ -172,6 +184,7 @@
         <textarea
           bind:value={message}
           name="message"
+          autofocus
           placeholder="Your answer here.."
           required="true"
         />
