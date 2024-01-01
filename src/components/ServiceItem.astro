@@ -100,4 +100,11 @@ const { serviceImage, serviceTitle, serviceText } = Astro.props;
     transform: rotate(45deg);
     z-index: -1;
   }
+
+  @media (max-width: 900px) {
+    .service-icon {
+      width: 75px;
+      height: 75px;
+    }
+  }
 </style>

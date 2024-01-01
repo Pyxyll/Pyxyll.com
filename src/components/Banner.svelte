@@ -60,6 +60,19 @@
       margin-left: -5px;
       margin-right: -5px;
       overflow-x: hidden;
+      height: 5rem;
+      font-size: 2rem;
+    }
+
+    .banner-text {
+      font-weight: 500;
+      top: 1.3rem;
+    }
+
+    .imagedivider {
+      display: inline;
+      width: 25px;
+      padding-right: 20px;
     }
   }
 </style>

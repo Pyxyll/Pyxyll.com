@@ -8,14 +8,14 @@
   <nav class:dropdown-opened={mobileNavOpened}>
     <a class="logo" href="/">
       <img
-        src="images/offsetlogo.svg"
+        src="/images/offsetlogo.svg"
         alt="Our professional logo (ideally an svg!)"
       />
     </a>
     <div class="dropdown-link-container">
-      <a href="about">About</a>
-      <a href="works">Works</a>
-      <a href="contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/works">Works</a>
+      <a href="/contact">Contact</a>
     </div>
     <div
       class="mobile-dropdown-toggle"
@@ -132,7 +132,9 @@
       z-index: 1;
       opacity: 0;
       transform: translateY(-100%);
-      transition: transform 0.2s, opacity 0.2s;
+      transition:
+        transform 0.2s,
+        opacity 0.2s;
       border-top: solid 4px var(--black);
       border-bottom: solid 4px var(--black);
     }

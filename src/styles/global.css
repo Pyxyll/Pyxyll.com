@@ -57,9 +57,24 @@ section {
   padding: 10rem 2rem;
 }
 
+.container {
+  margin: 2em auto;
+  max-width: 1600px;
+}
+
 .hero-offset {
   border-bottom: solid 0px;
   padding: 10rem 2rem;
+}
+
+.emphasis {
+  font-size: 500%;
+  transform: rotate(-2deg);
+  margin: 0px 0px 40px 0px;
+  padding: 1rem 2rem;
+  color: var(--white);
+  display: inline-block;
+  background-color: var(--black);
 }
 
 @media (max-width: 1200px) {

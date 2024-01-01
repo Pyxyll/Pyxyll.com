@@ -1,0 +1,69 @@
+---
+import Main from "../../layouts/Main.astro";
+const posts = await Astro.glob("../../pages/works/*.md");
+---
+
+<Main title="Pyxyll - Works">
+  <section>
+    <div class="container">
+      <h2 class="emphasis">Works</h2>
+    </div>
+    <div class="container">
+      <div class="blog-grid">
+        {
+          posts
+            .slice(0)
+            .reverse()
+            .map((post) => (
+              <a href={post.url} class="blog-post">
+                <img
+                  style="width: 300px;"
+                  src={post.frontmatter.image.url}
+                  alt=""
+                />
+                <h3>{post.frontmatter.title}</h3>
+                <p>{post.frontmatter.pubDate}</p>
+              </a>
+            ))
+        }
+      </div>
+    </div>
+  </section>
+</Main>
+
+<style>
+  .blog-grid {
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em; /* Gap between each service block */
+    max-width: 110rem;
+  }
+
+  .blog-post {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    border: solid 2px var(--black);
+    top: 0;
+    left: 0;
+    transition: all 0.15s linear 0s;
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: white;
+    color: black;
+    box-shadow: 8px 8px 0 black;
+    text-decoration: none;
+    border-style: solid;
+  }
+  .emphasis {
+    font-size: 500%;
+    transform: rotate(-2deg);
+    margin: 0px 0px 40px 0px;
+    padding: 1rem 2rem;
+    color: var(--white);
+    display: inline-block;
+    background-color: var(--black);
+  }
+</style>
