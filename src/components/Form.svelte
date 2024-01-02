@@ -55,7 +55,8 @@
     const result = await response.json();
     if (result.success) {
       console.log(result);
-      status = result.message || "Success";
+      status = "Success";
+      window.location.href = "/path-to-your-page";
     }
   };
 </script>
@@ -287,11 +288,6 @@
         <input type="hidden" name="subject" bind:value={subject} />
         <input type="hidden" name="message" bind:value={message} />
         <input type="submit" />
-        <input
-          type="hidden"
-          name="redirect"
-          value="https://pyxyll.com/success"
-        />
       </div>
     {:else}
       <div>
