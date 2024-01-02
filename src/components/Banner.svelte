@@ -50,7 +50,7 @@
       left: 0%;
     }
     100% {
-      left: -95%;
+      left: -102%;
     }
   }
 
@@ -65,6 +65,7 @@
     }
 
     .banner-text {
+      animation: scrollText 8s linear infinite;
       font-weight: 500;
       top: 1.3rem;
     }

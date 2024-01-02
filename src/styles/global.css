@@ -77,6 +77,13 @@ section {
   background-color: var(--black);
 }
 
+@media (max-width: 900px) {
+  .emphasis {
+    font-size: 200%;
+    margin: 0px 0px 10px 0px;
+  }
+}
+
 @media (max-width: 1200px) {
   h1 {
     font-size: var(--Mheading-text-h1);

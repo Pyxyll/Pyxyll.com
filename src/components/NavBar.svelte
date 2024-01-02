@@ -1,6 +1,14 @@
 <script>
   let mobileNavOpened = false;
   const toggleMobileNav = () => (mobileNavOpened = !mobileNavOpened);
+
+  import { onMount } from "svelte";
+
+  let activeLink;
+
+  onMount(() => {
+    activeLink = window.location.pathname;
+  });
 </script>
 
 <header>
@@ -13,9 +21,9 @@
       />
     </a>
     <div class="dropdown-link-container">
-      <a href="/about">About</a>
-      <a href="/works">Works</a>
-      <a href="/contact">Contact</a>
+      <a href="/about" class:active={activeLink === "/about"}>About</a>
+      <a href="/works" class:active={activeLink === "/works"}>Works</a>
+      <a href="/contact" class:active={activeLink === "/contact"}>Contact</a>
     </div>
     <div
       class="mobile-dropdown-toggle"
@@ -81,6 +89,14 @@
   .logo {
     margin-right: auto;
     width: 75px;
+    transition:
+      transform 0.3s,
+      scale 0.3s;
+  }
+
+  .logo:hover {
+    transform: translateY(-2px);
+    scale: 105%;
   }
 
   .dropdown-link-container > a {
@@ -100,6 +116,9 @@
     background-size: 100% 0.2em;
   }
 
+  a.active {
+    background-size: 100% 0.2em;
+  }
   .mobile-dropdown-toggle {
     display: none;
   }

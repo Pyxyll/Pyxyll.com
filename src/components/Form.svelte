@@ -303,7 +303,7 @@
   .formWrapper {
     font-size: 1.5em;
     padding: 20px;
-    margin: 10em 10em;
+    margin: 10em 0em;
   }
   label {
     display: block;
@@ -428,5 +428,25 @@
     background-color: black;
     transform: rotate(45deg);
     z-index: -1;
+  }
+
+  @media (max-width: 900px) {
+    .formWrapper {
+      font-size: 1em;
+      padding: 20px;
+      margin: 20em 0em 20em 0em;
+    }
+
+    input,
+    textarea {
+      margin: 1em auto;
+      width: 100%;
+      height: auto;
+      font-size: 1.7em;
+      background-color: var(--white);
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #000;
+    }
   }
 </style>
