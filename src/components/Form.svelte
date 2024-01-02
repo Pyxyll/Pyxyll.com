@@ -56,7 +56,7 @@
     if (result.success) {
       console.log(result);
       status = "Success";
-      window.location.href = "/path-to-your-page";
+      window.location.href = "/success";
     }
   };
 </script>
