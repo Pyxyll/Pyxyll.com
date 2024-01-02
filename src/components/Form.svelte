@@ -208,7 +208,9 @@
       <div in:fade={{ duration: 300 }}>
         If you have any additional information you can upload it here!
         <input type="file" on:change={handleFileChange} name="file" />
-        <button type="button" on:click={() => nextStep(true)}>Skip</button>
+        <button class="nextBtn" type="button" on:click={() => nextStep(true)}
+          >Skip</button
+        >
         {#if editing}
           <button
             on:click={() => {
@@ -285,6 +287,11 @@
         <input type="hidden" name="subject" bind:value={subject} />
         <input type="hidden" name="message" bind:value={message} />
         <input type="submit" />
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://pyxyll.com/success"
+        />
       </div>
     {:else}
       <div>
@@ -353,14 +360,14 @@
   } */
 
   /* Labels and textual content */
-  /* .review-box {
+  .review-box {
     border: 2px solid #000;
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  } */
+  }
 
   .nextBtn {
     top: 0;

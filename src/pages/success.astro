@@ -1,0 +1,28 @@
+---
+import Main from "../layouts/Main.astro";
+---
+
+<Main>
+  <div class="grid">
+    <section>
+      <div class="container">
+        <h1>Thanks for getting in touch.</h1>
+        <p>I will get back to you on the email you provided.</p>
+      </div>
+    </section>
+  </div>
+</Main>
+
+<style>
+  .grid {
+    text-align: center;
+    font-size: 200%;
+    font-weight: 900;
+    background-image: repeating-linear-gradient(
+        #00000074 0 2px,
+        transparent 2px 100%
+      ),
+      repeating-linear-gradient(90deg, #00000074 0 2px, transparent 2px 100%);
+    background-size: 50px 50px;
+  }
+</style>
