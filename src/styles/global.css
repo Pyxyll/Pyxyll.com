@@ -64,8 +64,12 @@ section {
 
 .hero-offset {
   border-bottom: solid 0px;
-  padding: 10rem 2rem;
+  padding: 10rem 2rem 16rem 2rem;
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 50px 50px;
+  background-position: -50px -30px;
 }
+
 
 .emphasis {
   font-size: 500%;
@@ -101,4 +105,66 @@ section {
     border-bottom: solid 4px var(--black);
     padding: 2rem;
   }
+}
+
+.chiplet {
+  top: 0;
+  left: 0;
+  position: relative;
+  display: inline-block;
+  padding: 10px 25px;
+  letter-spacing: 1px;
+  box-shadow: 6px 6px 0 black;
+  text-decoration: none;
+  border: var(--black) solid 2px;
+  border-radius: 20px;
+  margin: 0px 10px 0px 0px;
+}
+
+.chipletsm {
+  top: 0;
+  left: 0;
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 0 black;
+  text-decoration: none;
+  border: var(--black) solid 2px;
+  border-radius: 20px;
+  margin: 0px 8px 0px 0px;
+}
+
+.Astro {
+  background-color: orangered;
+  color: white;
+}
+
+.Node {
+  background-color: #8cc84b;
+  color: white;
+}
+
+.Svelte {
+  background-color: #ff3e00;
+  color: white;
+}
+
+.Wordpress {
+  background-color: #21759b;
+  color: white;
+}
+
+.Javascript {
+  background-color: #f0db4f;
+  color: black;
+}
+
+.Elementor {
+  background-color: #7a002b;
+  color: white;
+}
+
+.bannerCont {
+  margin-top: -100px;
 }

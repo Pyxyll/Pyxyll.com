@@ -5,6 +5,7 @@ import PageFooter from "../components/PageFooter.astro";
 import "../styles/global.css";
 const { title } = Astro.props;
 const { frontmatter } = Astro.props;
+let tags = frontmatter.tags;
 ---
 
 <html lang="en">
@@ -29,10 +30,10 @@ const { frontmatter } = Astro.props;
       <html>
         <!-- ... -->
         <div class="container">
-          <h1>{frontmatter.title}</h1>
+          <h1 class="emphasis">{frontmatter.title}</h1>
           <h4>Author: {frontmatter.author} - {frontmatter.pubDate}</h4>
           <p>{frontmatter.description}</p>
-          <p>{frontmatter.tags[0]}</p>
+          {tags.map((tag) => <div class={`chiplet ${tag}`}>{tag}</div>)}
           <slot />
           <!-- Markdown content is injected here -->
           <!-- ... -->

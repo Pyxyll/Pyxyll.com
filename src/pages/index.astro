@@ -8,15 +8,19 @@ import SubFooter from "../components/SubFooter.astro";
 
 <Main title="Pyxyll - Something Different">
   <section class="hero-offset">
+    <div class="landscape"></div>
+
     <Hero />
   </section>
 
-  <Banner
-    repeatCount={13}
-    text="Identity. Defined. "
-    image="images/bannerDivider.svg"
-    rotation="-2deg"
-  />
+  <div class="bannerCont">
+    <Banner
+      repeatCount={13}
+      text="Identity. Defined. "
+      image="images/bannerDivider.svg"
+      rotation="-2deg"
+    />
+  </div>
 
   <section>
     <ServiceSection />

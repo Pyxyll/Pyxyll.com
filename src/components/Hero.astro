@@ -9,7 +9,7 @@ import CtaButton from "./CtaButton.astro";
       <span class="outline">Develop.</span>
       <span>Deploy.</span>
     </h1>
-    <p>An Elegant Weapon For A More Civilised Age.</p>
+    <p>Let's make it funky!</p>
     <CtaButton buttonText="I need a website" buttonLink="contact" />
   </div>
   <div class="image-container">
@@ -17,106 +17,105 @@ import CtaButton from "./CtaButton.astro";
     <img src="images/developico.svg" alt="Description of Image" />
     <img src="images/deployico.svg" alt="Description of Image" />
   </div>
-</div>
 
-<style>
-  /* General Styling */
-  .hero-section {
-    display: flex;
-    max-width: 1600px;
-    margin: 0 auto; /* Center the section if viewport width > 1600px */
-  }
-
-  h1 span {
-    display: block;
-    font-size: 4em;
-    line-height: 1em;
-  }
-
-  .outline {
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
-    fill: none;
-    color: #f5f5f5;
-  }
-
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .image-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("/images/herobg.svg") no-repeat center/cover;
-  }
-
-  .image-container img {
-    max-width: 35%;
-    height: auto;
-    padding: 0px 50px;
-  }
-
-  .image-container > img:nth-child(1) {
-    margin-top: 200px;
-    animation: hover 5s infinite ease-in-out;
-  }
-
-  .image-container > img:nth-child(2) {
-    margin-bottom: 200px;
-    animation: hover2 4s infinite ease-in-out;
-  }
-
-  .image-container > img:nth-child(3) {
-    margin-bottom: 10px;
-    animation: hover 7s infinite ease-in-out;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 1200px) {
+  <style>
+    /* General Styling */
     .hero-section {
-      flex-direction: column;
+      display: flex;
+      max-width: 1600px;
+      margin: 0 auto; /* Center the section if viewport width > 1600px */
     }
-    .image-container {
-      display: none;
-    }
-    h1 > span {
-      font-size: 3em;
+
+    h1 span {
+      display: block;
+      font-size: 4em;
+      line-height: 1em;
     }
 
     .outline {
-      -webkit-text-stroke-width: 1.2px;
+      -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: black;
       fill: none;
       color: #f5f5f5;
     }
-  }
 
-  @keyframes hover {
-    0% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(40px);
+    .content {
+      flex: 1;
+      padding: 20px;
     }
 
-    100% {
-      transform: translateY(0px);
+    .image-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-  }
 
-  @keyframes hover2 {
-    0% {
-      transform: translateY(0px);
+    .image-container img {
+      max-width: 35%;
+      height: auto;
+      padding: 0px 50px;
     }
-    50% {
-      transform: translateY(50px);
+
+    .image-container > img:nth-child(1) {
+      margin-top: 200px;
+      animation: hover 5s infinite ease-in-out;
     }
-    100% {
-      transform: translateY(0px);
+
+    .image-container > img:nth-child(2) {
+      margin-bottom: 200px;
+      animation: hover2 4s infinite ease-in-out;
     }
-  }
-</style>
+
+    .image-container > img:nth-child(3) {
+      margin-bottom: 10px;
+      animation: hover 7s infinite ease-in-out;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .hero-section {
+        flex-direction: column;
+      }
+      .image-container {
+        display: none;
+      }
+      h1 > span {
+        font-size: 3em;
+      }
+
+      .outline {
+        -webkit-text-stroke-width: 1.2px;
+        -webkit-text-stroke-color: black;
+        fill: none;
+        color: #f5f5f5;
+      }
+    }
+
+    @keyframes hover {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(40px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes hover2 {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(50px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  </style>
+</div>
