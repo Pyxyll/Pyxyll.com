@@ -1,4 +1,4 @@
-# Project Name
+# Pyxyll.com
 
 This is a web project built with Astro and Svelte. It includes various components for building a complete website.
 
