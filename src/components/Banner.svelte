@@ -9,7 +9,14 @@
   <div class="banner">
     <div class="banner-text">
       {#each Array(repeatCount).fill() as _}
-        {text} <img class="imagedivider" src={image} alt="Banner Divider" />
+        {text}
+        <img
+          class="imagedivider"
+          src={image}
+          alt="Banner Divider"
+          width="50px"
+          height="50px"
+        />
       {/each}
     </div>
   </div>

@@ -17,7 +17,9 @@
     <a class="logo" href="/">
       <img
         src="/images/offsetlogo.svg"
-        alt="Our professional logo (ideally an svg!)"
+        alt="Pyxyll Logo"
+        width="75px"
+        height="57px"
       />
     </a>
     <div class="dropdown-link-container">
